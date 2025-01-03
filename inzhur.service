@@ -1,0 +1,15 @@
+[Unit]
+Description=Inzhur scrapper service
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/inzhur_scrapper
+ExecStart=/usr/bin/python3 /root/inzhur_scrapper/webservice.py 
+StandardInput=tty-force
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
