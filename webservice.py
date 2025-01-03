@@ -14,7 +14,7 @@ def fetch_data():
     data = json.loads( scrapper.scrape())
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=fetch_data, trigger="interval", minutes=45)
+scheduler.add_job(func=fetch_data, trigger="interval", hours=12)
 scheduler.start()
 
 atexit.register(lambda: scheduler.shutdown())
