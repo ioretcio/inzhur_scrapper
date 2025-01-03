@@ -11,8 +11,7 @@ class InzhurScraper:
             "https://www.inzhur.reit/funds/Supermarket",
             "https://www.inzhur.reit/funds/Zhytniy",
             "https://www.inzhur.reit/funds/2001",
-            "https://www.inzhur.reit/funds/1001",
-            "https://www.inzhur.reit/funds/Bud"
+            "https://www.inzhur.reit/funds/1001"
         ]
 
     def scrape(self):
