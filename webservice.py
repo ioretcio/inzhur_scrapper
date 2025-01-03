@@ -7,6 +7,7 @@ from InzhurScraper import InzhurScraper
 app = Flask(__name__)
 data = {}
 scrapper = InzhurScraper()
+
 def fetch_data():
     global data
     data = scrapper.scrape()
@@ -23,4 +24,4 @@ def get_data():
 
 if __name__ == '__main__':
     fetch_data()  # Initial fetch
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=1683, debug=True)
